@@ -211,6 +211,8 @@
 }
 .contact-section-inner a {
     padding: 10px 0px;
+    text-decoration: none;
+    color: #0072B5;
 }
 
 
