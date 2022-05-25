@@ -380,6 +380,7 @@
 @media screen and (min-width: 700px) {
     .project-list li .hidden-side {
         display: flex;
+        width: 25%;
     }
     .project-list li a:first-of-type {
         box-shadow: none;
@@ -412,6 +413,10 @@
         transform: scaleX(1);
         transform-origin: left;
     }
+    .project-list li img {
+        width: 50%;
+    }
+    
 }
 @media screen and (min-width: 1000px) {
     .big-text {
