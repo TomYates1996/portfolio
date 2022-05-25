@@ -257,6 +257,8 @@
     padding: 0px 2px;
     bottom: 0px;
     right: 0px;
+    color: #0072B5;
+    font-size: 14px; 
 }
 .project-list li {
     padding: 20px 0px;
