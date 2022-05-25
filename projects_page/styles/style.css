@@ -383,7 +383,11 @@
     .project-list li .hidden-side {
         display: flex;
         width: 25%;
+        padding-right: 6px;
     }
+    .project-list li .hidden-side:last-of-type {
+         padding-left: 6px; 
+    }    
     .project-list li a:first-of-type {
         box-shadow: none;
     }
