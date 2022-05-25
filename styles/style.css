@@ -1,0 +1,322 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* ------------- */
+/* ---NAVBAR--- */
+/* ----------- */
+.navbar {
+    width: 100%;
+    background-color: #69D6C6;
+}
+.navbar .nav-container {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 20px;
+    height: 60px;
+    max-width: 1000px;
+}
+.navbar .nav-container .logo {
+    margin-right: auto;
+}
+.navbar .nav-container .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 0px;
+   
+}
+.navbar .nav-container .websites-box {
+    list-style-type: none;
+}
+.navbar .nav-container .websites-box li {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.navbar .nav-container .websites-box li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px; 
+    text-align: center;
+}
+.navbar .nav-container .websites-box li a:hover {
+    color: #000;
+    transition: all 1s ease;
+}
+
+/* Hamburger MENU TOGGLE */
+.navbar .nav-container .hamburger-menu-wrap {
+    height: 50px;
+    width: 50px;
+    display: none;
+    overflow: hidden;
+    border-radius: 1.3rem;
+    position: relative;
+}
+
+.navbar .nav-container .hamburger-menu-wrap .menu-checkbox {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;    
+}
+.navbar .nav-container .hamburger-menu-wrap .menu-checkbox:checked ~ .hamburger-menu div{
+    transform: rotate(45deg);
+}
+.navbar .nav-container .hamburger-menu-wrap .menu-checkbox:checked ~ .hamburger-menu div::before,
+.navbar .nav-container .hamburger-menu-wrap .menu-checkbox:checked ~ .hamburger-menu div::after {
+    transform: rotate(90deg);
+    top: 0px;
+}
+
+
+.websites-drop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.navbar .nav-container .hamburger-menu {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    display: flex;
+    cursor: pointer;    
+    position: absolute;
+}
+.navbar .nav-container .hamburger-menu div {
+    height: 2px;
+    width: 30px;
+    background-color: #000;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.navbar .nav-container .hamburger-menu div::before,
+.navbar .nav-container .hamburger-menu div::after{
+    content: '';
+    height: 2px;
+    width: 30px;
+    background-color: #000;
+    position: absolute;
+    top: -10px;
+    transition: all 0.4s ease;
+}
+.navbar .nav-container .hamburger-menu div::after {
+    top: 10px;
+}
+
+
+
+/* Website image section */
+.website-showcase {
+    height: 100%;
+    width: 100%;
+}
+.website-show-con {
+    max-width: 1000px;
+}
+.web-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px 20px;
+}
+.web-grid li {
+    width: 100%;
+    border: 1px #000000 solid;
+    height: 100%;
+    overflow: hidden;
+}
+.web-grid li a {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.web-grid li a img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+/* Text overlay */
+.overlay-text {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: #69D6C6;
+    bottom: 0px;
+    opacity: 0.8;
+}
+.overlay-text h2 {
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+/* Text-overlay hover */
+.web-grid li a:hover > .overlay-text {
+    background-color: #3ca898;
+}
+.web-grid li:hover a img {
+    transform: scale(1.1);
+}
+
+.foot {
+    width: 100%;
+    background-color: #69D6C6;
+    margin-top: auto;
+}
+.foot-inner {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+.foot-container {
+    width: 100%;
+    flex-direction: column;
+}
+.foot-list {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+.foot-list li {
+    padding: 10px 0px;
+}
+.foot-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+}
+.foot-list li a:hover {
+    color: #000;
+}
+.foot-logo {
+    text-align: center;
+    color: #fff;
+    padding: 20px 0px 10px 0px;
+    font-size: 26px;
+    border-top: 1px #fff solid;
+    width: 100%;
+}
+.section-head-text:first-of-type {
+    padding-top: 20px;
+}
+.section-head-text {
+    padding-top: 0px;
+    padding-left: 20px;
+    font-size: 26px;
+    color: #4b4b4b;
+    text-decoration: underline;
+}
+
+.not-phishing {
+    width: 100%;
+    background-color: #ffbb00;
+    padding: 5px;
+}
+.not-phishing p {
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media(max-width:760px){
+    .web-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width:608px){
+    .navbar .nav-container {
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-evenly;
+    }
+    .navbar .nav-container .logo {
+        margin-right: 0px;
+    }
+    .navbar .nav-container .websites-box {
+        width: 100%;
+    }
+    .navbar .nav-container .websites-box li {
+        width: 100%;    
+    }
+}
+
+
+
+
+
+/* Mobiles */
+@Media (max-width:460px) {
+    .navbar .nav-container .websites-box {
+        display: flex;
+        flex-direction: column;
+        order: 3;
+        width: 100vw;
+        background-color: #3ca898;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+    .navbar .nav-container .websites-box li a {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px 0px;
+        transition: all 0.1s ease;
+    }
+    .navbar .nav-container .websites-box li a:hover {
+        background-color: #37998a;
+    }
+    /* .navbar .nav-container .websites-box {
+        display: flex;
+        order: 3;
+        position: absolute;
+        height: 250px;
+        width: 100vw;
+        z-index: -2;
+        background-color: #69d6c6;
+        top: -150px;
+        left: 0%;
+        flex-direction: column;
+    }
+    .navbar .nav-container .websites-box li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar .nav-container .websites-box li a {
+        font-size: 25px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+    } */
+    .navbar .nav-container .logo {
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    .navbar .nav-container {
+        flex-direction: column;
+        justify-content: flex-end;
+        height: unset;
+    }
+    .navbar .nav-container .hamburger-menu-wrap {
+        display: flex;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
